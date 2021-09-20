@@ -1,0 +1,186 @@
+/* Reglas de diseño */
+:root{
+    /* Colores */
+    --principal: #FFE7E2;
+    --acento: #71C8E2;
+    --cta: #68CA87;
+    --cajas: #F14C2E;
+    --typo: #312D2D;
+    /* Tipografia */
+    --titulos: 'Open Sans', sans-serif; /* 300/400/700 */
+    --parrafos: 'Lato', sans-serif; /* 100/300/400/700 */
+    /* Truchisponsive */
+    --truchisponsive: 2;
+}
+
+* {
+    font-family: var(--titulos);
+    font-weight: 400;
+    color: var(--typo);
+}
+
+body{
+    background-color: var(--principal);
+}
+
+h1{
+    font-weight: 700;
+}
+
+h2{
+    font-family: var(--parrafos);
+    font-weight: 300;
+}
+
+a{
+    color: #FFE7E2;
+    text-decoration: none;
+}
+
+a:hover{
+    color:white
+}
+
+/* Header */
+header{
+    display: flex;
+    padding: 5px ;
+    justify-content: space-between;
+    background-color: #F14C2E;
+}
+
+.menu{
+    background-color: var(--cajas);
+    display: flex;
+    padding-top: 10px;
+}
+
+.menu__items{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Grid responsive */
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem 1.5rem;
+}
+
+/* Card elPatron */
+.grilla__patron{
+    margin-top: 100px;
+    grid-column-start: var(--truchisponsive);
+    grid-column-end: span 4;
+}
+
+button{
+    color: var(--principal);
+    border-radius: 5px;
+    background-color: var(--cta);
+}
+
+/* Cajas */
+.grilla__caja{
+    justify-content: center;
+    margin-top: 80px;
+    display: grid;
+    padding: 15px;
+    grid-column-end: span 4;
+}
+
+/* Formulario */
+.grilla__forma{ 
+    padding: 25px;
+    margin: 150px ;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: baseline;
+    margin-top: 200px;
+    height: 80px;
+    background-color: var(--acento);
+}
+
+/* Nosotros */
+.col-md-4{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    justify-content: center;
+    margin-top: 105px;
+    padding: 15px;
+}
+
+.grilla__portfolio{
+    display: grid;
+    grid-column-start: var(--truchisponsive);
+    grid-column-end: span 10;
+}
+
+/* Servicios */
+.grilla__cajon{
+    display: grid;
+    grid-column-start: var(--truchisponsive);
+    grid-column-end: span 10;
+    margin-top: 200px;
+}
+
+/* Clientes */
+.grilla__cliente{
+    display: grid;
+    font-size: 14px;
+    margin-top: 30px;
+    grid-column-end: span 4;
+    padding: 20px;
+}
+.grilla--destacado{
+    display: grid;
+    grid-column-start: var(--truchisponsive);
+    grid-column-end: span 10;
+    height: 400px;
+}
+
+/* Noticias */
+.grilla__noticias{
+    display: grid;
+    grid-column-start: var(--truchisponsive);
+    grid-column-end: span 10;
+    height: 60vh;
+}
+
+/* Viewport < tablet */
+@media (max-width:768px) {
+    .grilla > * {
+        grid-column-end: span 12;
+    }
+    .grilla {
+        gap: 1.5rem 1.5rem;
+    }
+}
+
+/* Viewport < celular */
+@media (max-width:450px) {
+    .grilla > * {
+        grid-column-end: span 12;
+    }
+    .grilla {
+        gap: 1.5rem;
+    }
+}
+
+/* Var truchisponsive */
+
+@media (max-width: 768px) {
+    :root{
+        --truchisponsive: 0; 
+    }
+}
