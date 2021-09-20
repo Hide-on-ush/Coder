@@ -100,6 +100,7 @@ button{
     margin: 150px ;
     border-radius: 1rem;
     background-color: aliceblue;
+    grid-column-end: span 4;
 }
 
 /* Footer */
