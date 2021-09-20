@@ -72,6 +72,7 @@ header{
 
 /* Card elPatron */
 .grilla__patron{
+    display: grid;
     margin-top: 100px;
     grid-column-start: var(--truchisponsive);
     grid-column-end: span 4;
@@ -94,6 +95,7 @@ button{
 
 /* Formulario */
 .grilla__forma{ 
+    display: grid;
     padding: 25px;
     margin: 150px ;
     border-radius: 1rem;
