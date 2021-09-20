@@ -1,0 +1,174 @@
+
+$principal: #FFE7E2;
+$acento: #71C8E2;
+$cta: #68CA87;
+$cajas: #F14C2E;
+$typo: #312D2D;
+$columna : 2;
+$titulos: 'Open Sans', sans-serif; 
+$parrafos: 'Lato', sans-serif; 
+
+*{
+    font-family: $titulos;
+    font-weight: 400;
+    color: $typo;
+}
+
+body{
+    background-color: $principal;
+}
+
+h1{
+    font-weight: 700;
+}
+
+h2{
+    font-family: $parrafos;
+    font-weight: 300;
+}
+
+a{
+    color: $principal;
+    text-decoration: none;
+    &:hover{
+        color: white;
+    }
+}
+
+@mixin truchisponsive {
+    grid-column-end: span 10;
+    grid-column-start: $columna;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: $cajas;
+    & .menu{
+            display: flex;
+            padding-top: 10px;
+            &__items{
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                text-decoration: none;
+            }
+        }
+}
+
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1,5rem;
+}
+.grilla{
+    &__patron{
+        margin-top: 100px;
+        grid-column-end: span 4;
+        grid-column-start: $columna;
+    }
+}
+
+button{
+    color: $principal;
+    border-radius: 5px;
+    background-color: $cta;
+}
+
+.grilla{
+    &__caja{
+        display: grid;
+        grid-column-end: span 4;
+        justify-content: center;
+        padding: 15px;
+        margin-top: 80px;
+    }
+}
+
+.grilla{
+    &__forma{
+        display: grid;
+        padding: 25px;
+        margin: 150px;
+        border-radius: 1rem;
+        background-color: aliceblue;
+    }
+}
+
+.col-md-4{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    justify-content: center;
+    margin-top: 105px;
+    padding: 15px;
+} 
+
+
+.grilla{
+    &__portfolio{
+        display: grid;
+        @include truchisponsive()
+    }
+}
+
+.grilla{
+    &__cajon{
+        display: grid;
+        margin-top: 200px;
+        @include truchisponsive()
+    }
+} 
+
+.grilla{
+    &__cliente{
+        display: grid;
+        font-size: 14px;
+        margin-top: 30px;
+        grid-column-end: span 4;
+        padding: 20px;
+    }
+}
+
+.grilla{
+    &--destacado{
+        display: grid;
+        height: 400px;
+        @include truchisponsive()
+    }
+}
+
+.grilla{
+    &__noticias{
+        display: grid;
+        height: 60vh;
+        @include truchisponsive()
+    }
+}
+
+/* Viewport < tablet */
+@media (max-width:768px) {
+    .grilla > * {
+        grid-column-end: span 12;
+    }
+    .grilla {
+        gap: 1.5rem 1.5rem;
+    }
+}
+
+/* Viewport < celular */
+@media (max-width:450px) {
+    .grilla > * {
+        grid-column-end: span 12;
+    }
+    .grilla {
+        gap: 1.5rem;
+    }
+}
+
+/* Var responsive */
+@media (max-width: 768px) {
+    $columna:0;
+}
