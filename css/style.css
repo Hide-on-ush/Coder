@@ -112,16 +112,12 @@ button{
     align-items: center;
 }
 
-    
-
 /* Formulario */
 .grilla__forma{ 
     display: grid;
     justify-content: center;
     padding: 20px;
     margin: 150px ;
-    border-radius: 1rem;
-    background-color: aliceblue;
     grid-column-end: span 6;
 }
 
