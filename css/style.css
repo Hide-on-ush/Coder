@@ -15,7 +15,6 @@
 
 * {
     font-family: var(--titulos);
-    font-weight: 400;
     color: var(--typo);
 }
 
@@ -32,6 +31,10 @@ h2{
     font-weight: 300;
 }
 
+h5{
+    font-family: var(--titulos);
+    font-weight: 700;
+}
 a{
     color: #FFE7E2;
     text-decoration: none;
@@ -48,7 +51,9 @@ header{
     justify-content: space-between;
     background-color: #F14C2E;
 }
-
+.logo{
+    max-height: 50px;
+}
 .menu{
     background-color: var(--cajas);
     display: flex;
@@ -73,40 +78,57 @@ header{
 /* Card elPatron */
 .grilla__patron{
     display: grid;
-    margin-top: 100px;
+    margin-top: 300px;
+    margin-bottom: 150px;
     grid-column-start: var(--truchisponsive);
-    grid-column-end: span 4;
+    grid-column-end: span 3;
 }
 
 button{
     color: var(--principal);
     border-radius: 5px;
     background-color: var(--cta);
+    max-width: 8rem;
 }
 
 /* Cajas */
-.grilla__caja{
-    justify-content: center;
-    margin-top: 80px;
+.grilla__caja1{
     display: grid;
-    padding: 15px;
     grid-column-end: span 4;
+    align-items: center;
 }
+.grilla__caja2{
+    display: grid;
+    grid-column-end: span 4;
+    align-items: center;
+}
+.grilla__caja3{
+    display: grid;
+    grid-column-end: span 4;
+    align-items: center;
+}
+.card-img-top{
+    justify-content: center;
+    align-items: center;
+}
+
+    
 
 /* Formulario */
 .grilla__forma{ 
     display: grid;
-    padding: 25px;
+    justify-content: center;
+    padding: 20px;
     margin: 150px ;
     border-radius: 1rem;
     background-color: aliceblue;
-    grid-column-end: span 4;
+    grid-column-end: span 6;
 }
 
 /* Footer */
 footer{
     display: flex;
-    justify-content: baseline;
+    justify-content: space-around;
     margin-top: 200px;
     height: 80px;
     background-color: var(--acento);
@@ -115,10 +137,8 @@ footer{
 /* Nosotros */
 .col-md-4{
     display: flex;
-    justify-content: center;
 }
 .card{
-    justify-content: center;
     margin-top: 105px;
     padding: 15px;
 }
@@ -149,7 +169,6 @@ footer{
     display: grid;
     grid-column-start: var(--truchisponsive);
     grid-column-end: span 10;
-    height: 400px;
 }
 
 /* Noticias */
@@ -158,6 +177,11 @@ footer{
     grid-column-start: var(--truchisponsive);
     grid-column-end: span 10;
     height: 60vh;
+    margin-bottom: 300px;
+}
+
+#link-noticias{
+    color: var(--acento);
 }
 
 /* Viewport < tablet */
@@ -171,12 +195,15 @@ footer{
 }
 
 /* Viewport < celular */
-@media (max-width:450px) {
+@media (max-width:460px) {
     .grilla > * {
         grid-column-end: span 12;
     }
     .grilla {
         gap: 1.5rem;
+    }
+    .grilla__patron{
+        grid-column-end: span 6;
     }
 }
 
@@ -184,6 +211,6 @@ footer{
 
 @media (max-width: 768px) {
     :root{
-        --truchisponsive: 0; 
+        --truchisponsive: 2; 
     }
 }

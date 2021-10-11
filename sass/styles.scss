@@ -1,50 +1,11 @@
-
-$principal: #FFE7E2;
-$acento: #71C8E2;
-$cta: #68CA87;
-$cajas: #F14C2E;
-$typo: #312D2D;
-$columna : 2;
-$titulos: 'Open Sans', sans-serif; 
-$parrafos: 'Lato', sans-serif; 
-
-*{
-    font-family: $titulos;
-    font-weight: 400;
-    color: $typo;
-}
-
-body{
-    background-color: $principal;
-}
-
 h1{
-    font-weight: 700;
-}
-
-h2{
-    font-family: $parrafos;
-    font-weight: 300;
-}
-
-a{
-    color: $principal;
-    text-decoration: none;
-    &:hover{
-        color: white;
-    }
-}
-
-@mixin truchisponsive {
-    grid-column-end: span 10;
-    grid-column-start: $columna;
+    font-weight: 400;
 }
 
 header{
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    background-color: $cajas;
     & .menu{
             display: flex;
             padding-top: 10px;
@@ -59,21 +20,18 @@ header{
 
 .grilla{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
     gap: 1,5rem;
 }
+
 .grilla{
     &__patron{
         margin-top: 100px;
-        grid-column-end: span 4;
-        grid-column-start: $columna;
+        grid-column-end: 5px;
     }
 }
 
 button{
-    color: $principal;
     border-radius: 5px;
-    background-color: $cta;
 }
 
 .grilla{
@@ -110,7 +68,6 @@ button{
 .grilla{
     &__portfolio{
         display: grid;
-        @include truchisponsive()
     }
 }
 
@@ -118,7 +75,6 @@ button{
     &__cajon{
         display: grid;
         margin-top: 200px;
-        @include truchisponsive()
     }
 } 
 
@@ -136,7 +92,6 @@ button{
     &--destacado{
         display: grid;
         height: 400px;
-        @include truchisponsive()
     }
 }
 
@@ -144,31 +99,5 @@ button{
     &__noticias{
         display: grid;
         height: 60vh;
-        @include truchisponsive()
-    }
-}
-
-/* Viewport < tablet */
-@media (max-width:768px) {
-    .grilla > * {
-        grid-column-end: span 12;
-    }
-    .grilla {
-        gap: 1.5rem 1.5rem;
-    }
-}
-
-/* Viewport < celular */
-@media (max-width:450px) {
-    .grilla > * {
-        grid-column-end: span 12;
-    }
-    .grilla {
-        gap: 1.5rem;
-    }
-}
-
-/* Var responsive */
-@media (max-width: 768px) {
-    $columna:0;
+        }
 }

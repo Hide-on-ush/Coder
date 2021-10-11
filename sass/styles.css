@@ -1,29 +1,5 @@
-* {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  color: #312D2D;
-}
-
-body {
-  background-color: #FFE7E2;
-}
-
 h1 {
-  font-weight: 700;
-}
-
-h2 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-}
-
-a {
-  color: #FFE7E2;
-  text-decoration: none;
-}
-
-a:hover {
-  color: white;
+  font-weight: 400;
 }
 
 header {
@@ -34,7 +10,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5px;
-  background-color: #F14C2E;
 }
 
 header .menu {
@@ -57,23 +32,16 @@ header .menu__items {
 .grilla {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
   gap: 1,5rem;
 }
 
 .grilla__patron {
   margin-top: 100px;
-  -ms-grid-column-span: 4;
-      grid-column-end: span 4;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-end: 5px;
 }
 
 button {
-  color: #FFE7E2;
   border-radius: 5px;
-  background-color: #68CA87;
 }
 
 .grilla__caja {
@@ -117,20 +85,12 @@ button {
 .grilla__portfolio {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-span: 10;
-      grid-column-end: span 10;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
 }
 
 .grilla__cajon {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-span: 10;
-      grid-column-end: span 10;
   margin-top: 200px;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
 }
 
 .grilla__cliente {
@@ -146,42 +106,12 @@ button {
 .grilla--destacado {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-span: 10;
-      grid-column-end: span 10;
   height: 400px;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
 }
 
 .grilla__noticias {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-span: 10;
-      grid-column-end: span 10;
   height: 60vh;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-}
-
-/* Viewport < tablet */
-@media (max-width: 768px) {
-  .grilla > * {
-    -ms-grid-column-span: 12;
-        grid-column-end: span 12;
-  }
-  .grilla {
-    gap: 1.5rem 1.5rem;
-  }
-}
-
-/* Viewport < celular */
-@media (max-width: 450px) {
-  .grilla > * {
-    -ms-grid-column-span: 12;
-        grid-column-end: span 12;
-  }
-  .grilla {
-    gap: 1.5rem;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
